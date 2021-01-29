@@ -1,0 +1,142 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristian Sarca</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/fantastux.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="brand text-md">Cristian Sarca</a>
+
+                <ul class="menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="ml-1">
+                        <a href="#work">My Work</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            <div data-add="grid" class="wrapper">
+                <div>
+                    <h1 class="headline">Visual<br>Designer</h1>
+                    <p class="lead">
+                        Nothing feels better than creating something visually pleasing that has a purpose.
+                        I'm always learning and improving my skills in <b>UI Design</b>, <b>Vector Graphics</b>, <b>3D
+                            Modeling</b>, <b>Motion Design</b> and
+                        <b>Front-end Development</b> (HTML & CSS, JS).
+                    </p>
+                </div>
+
+                <div>
+                    <img src="./img/illu.svg" alt="hero illustration" class="img-responsive">
+                </div>
+            </div>
+
+        </div>
+        <div class="shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 64">
+                <path fill="var(--shape-bg)" id="waves"
+                    d="M385.668,31.212c69.6,6.268,136.992,17.5,206.4,24.318,98.868,9.713,201.828,10.3,300.54.227,95.928-9.765,195.4-33.584,290.184-45.685C1266.852-.664,1358.628-5.084,1440,8.329V64H0V48.111C122.959,25.54,256.336,19.7,385.668,31.212Z"
+                    fill="#f6f5f8" />
+            </svg>
+
+
+        </div>
+
+    </header>
+
+    <section id="work" class="section section-mb">
+        <div class="container">
+            <h3 class="section-title text-center section-mb">My work</h3>
+            <div data-add="grid" class="cols-3">
+
+                <a href="./landingheroes.html" class="card card-bg card-heroes">
+                    <div class="overlay"></div>
+                    <div class="details">
+                        <h4>Landing Heroes</h4>
+                    </div>
+                </a>
+
+                <a href="./logos.html" class="card card-bg card-logos">
+                    <div class="overlay"></div>
+                    <div class="details">
+                        <h4>Logos</h4>
+                    </div>
+                </a>
+
+                <a href="./uidesign.html" class="card card-bg card-eui">
+                    <div class="overlay"></div>
+                    <div class="details">
+                        <h4>App UI Design</h4>
+                    </div>
+                </a>
+
+                <a href="./animation.html" class="card card-bg card-anim">
+                    <div class="overlay"></div>
+                    <div class="details">
+                        <h4>3D Animation Movie</h4>
+                    </div>
+                </a>
+
+                <a href="./renders.html" class="card card-bg card-renders">
+                    <div class="overlay"></div>
+                    <div class="details">
+                        <h4>3D Renders</h4>
+                    </div>
+                </a>
+
+                <a href="./photoediting.html" class="card card-bg card-photoedit">
+                    <div class="overlay"></div>
+                    <div class="details">
+                        <h4>Photo Editing</h4>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p> &#169; 2021 - Cristian Sarca</p>
+        </div>
+
+
+    </footer>
+
+    <script>
+        const navbar = document.querySelector(".navbar");
+
+        window.onscroll = function () {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add("navbar-visible");
+            } else {
+                navbar.classList.remove("navbar-visible");
+            }
+        };
+
+        function toggleMenu() {
+            let menuBtn = document.querySelector(".menu");
+            menuBtn.classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>

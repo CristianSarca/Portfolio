@@ -1,0 +1,133 @@
+/* Layout */
+
+
+[data-add~="grid"] {
+    display: var(--display, grid);
+    grid-template-columns: var(--cols, minmax(0, 1fr));
+    grid-template-rows: var(--rows, minmax(0, 1fr));
+}
+
+[data-add~="grid"]>* {
+    grid-column: var(--col, auto);
+    grid-row: var(--row, auto);
+}
+
+[data-add~=flex] {
+    display: var(--display, flex);
+    flex-direction: var(--flex-direction, row);
+    flex-wrap: var(--flex-wrap, no-wrap);
+    justify-content: var(justify-content, flex-start);
+    align-items: var(--align-items, stretch);
+    align-content: var(--align-content, flex-start);
+}
+
+[data-add~=flex]>* {
+    order: var(--order, 0);
+    flex: var(--flex, 0 1 auto);
+    align-self: var(--align-self, auto);
+}
+
+[data-add~="grid"],
+[data-add~="flex"] {
+    gap: var(--gap, 0);
+}
+
+
+@media (min-width: 640px) {
+    [data-add~="grid"] {
+        display: var(--display-sm, var(--display, grid));
+        grid-template-columns: var(--cols-sm, var(--cols, minmax(0, 1fr)));
+        grid-template-rows: var(--rows-sm, var(--rows, minmax(0, 1fr)));
+    }
+
+    [data-add~="grid"]>* {
+        grid-column: var(--col-sm, var(--col, auto));
+        grid-row: var(--row-sm, var(--row, auto));
+    }
+
+    [data-add~=flex] {
+        display: var(--display-sm, var(--display, flex));
+        flex-direction: var(--flex-direction-sm, var(--flex-direction, row));
+        flex-wrap: var(--flex-wrap-sm, var(--flex-wrap, no-wrap));
+        justify-content: var(--justify-content-sm, var(justify-content, flex-start));
+        align-items: var(--align-items-sm, var(--align-items, stretch));
+        align-content: var(--align-content-sm, var(--align-content, flex-start));
+    }
+
+    [data-add~=flex]>* {
+        order: var(--order-sm, var(--order, 0));
+        flex: var(--flex-sm, var(--flex, 0 1 auto));
+        align-self: var(--align-self, var(--align-self, auto));
+    }
+
+    [data-add~="grid"],
+    [data-add~="flex"] {
+        gap: var(--gap-sm, var(--gap, 0));
+    }
+}
+
+@media (min-width: 960px) {
+    [data-add~="grid"] {
+        display: var(--display-md, var(--display-sm, var(--display, grid)));
+        grid-template-columns: var(--cols-md, var(--cols-sm, var(--cols, minmax(0, 1fr))));
+        grid-template-rows: var(--rows-md, var(--rows-sm, var(--rows, minmax(0, 1fr))));
+    }
+
+    [data-add~="grid"]>* {
+        grid-column: var(--col-md, var(--col-sm, var(--col, auto)));
+        grid-row: var(--row-md, var(--row-sm, var(--row, auto)));
+    }
+
+    [data-add~=flex] {
+        display: var(--display-md, var(--display-sm, var(--display, flex)));
+        flex-direction: var(--flex-direction-md, var(--flex-direction-sm, var(--flex-direction, row)));
+        flex-wrap: var(--flex-wrap-md, var(--flex-wrap-sm, var(--flex-wrap, no-wrap)));
+        justify-content: var(--justify-content-md, var(--justify-content-sm, var(justify-content, flex-start)));
+        align-items: var(--align-items-md, var(--align-items-sm, var(--align-items, stretch)));
+        align-content: var(--align-content-md, var(--align-content-sm, var(--align-content, flex-start)));
+    }
+
+    [data-add~=flex]>* {
+        order: var(--order-md, var(--order-sm, var(--order, 0)));
+        flex: var(--flex-md, var(--flex-sm, var(--flex, 0 1 auto)));
+        align-self: var(--align-self-md, var(--align-self, var(--align-self, auto)));
+    }
+
+    [data-add~="grid"],
+    [data-add~="flex"] {
+        gap: var(--gap-md, var(--gap-sm, var(--gap, 0)));
+    }
+}
+
+@media (min-width: 1120px) {
+    [data-add~="grid"] {
+        display: var(--display-lg, var(--display-md, var(--display-sm, var(--display, grid))));
+        grid-template-columns: var(--cols-lg, var(--cols-md, var(--cols-sm, var(--cols, minmax(0, 1fr)))));
+        grid-template-rows: var(--rows-lg, var(--rows-md, var(--rows-sm, var(--rows, minmax(0, 1fr)))));
+    }
+
+    [data-add~="grid"]>* {
+        grid-column: var(--col-lg, var(--col-md, var(--col-sm, var(--col, auto))));
+        grid-row: var(--row-lg, var(--row-md, var(--row-sm, var(--row, auto))));
+    }
+
+    [data-add~=flex] {
+        display: var(--display-lg, var(--display-md, var(--display-sm, var(--display, flex))));
+        flex-direction: var(--flex-direction-lg, var(--flex-direction-md, var(--flex-direction-sm, var(--flex-direction, row))));
+        flex-wrap: var(--flex-wrap-lg, var(--flex-wrap-md, var(--flex-wrap-sm, var(--flex-wrap, no-wrap))));
+        justify-content: var(--justify-content-lg, var(--justify-content-md, var(--justify-content-sm, var(justify-content, flex-start))));
+        align-items: var(--align-items-lg, var(--align-items-md, var(--align-items-sm, var(--align-items, stretch))));
+        align-content: var(--align-content-lg, var(--align-content-md, var(--align-content-sm, var(--align-content, flex-start))));
+    }
+
+    [data-add~=flex]>* {
+        order: var(--order-lg, var(--order-md, var(--order-sm, var(--order, 0))));
+        flex: var(--flex-lg, var(--flex-md, var(--flex-sm, var(--flex, 0 1 auto))));
+        align-self: var(--align-self-lg, var(--align-self-md, var(--align-self, var(--align-self, auto))));
+    }
+
+    [data-add~="grid"],
+    [data-add~="flex"] {
+        gap: var(--gap-lg, var(--gap-md, var(--gap-sm, var(--gap, 0))));
+    }
+}
